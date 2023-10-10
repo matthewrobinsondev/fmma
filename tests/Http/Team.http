@@ -1,0 +1,9 @@
+### Test that the model can't be found
+GET localhost/api/team/9999999999999999
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 404, "Response status is not 200");
+        client.assert(response.body.message === "Team could not be found.", "Expected 'Team could not be found.' message");
+    });
+%}
