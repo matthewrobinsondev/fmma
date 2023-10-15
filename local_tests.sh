@@ -8,4 +8,6 @@
 
 ./vendor/bin/sail pint
 
-./vendor/bin/sail artisan test
+./vendor/bin/sail artisan test --min=90
+
+./vendor/bin/sail exec php ./vendor/bin/pest --type-coverage --minimum=95

@@ -32,6 +32,8 @@
         "opcodesio/log-viewer": "^3.1",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-livewire": "^2.1",
+        "pestphp/pest-plugin-type-coverage": "^2.4",
         "phpmd/phpmd": "^2.14",
         "povils/phpmnd": "^3.2",
         "spatie/laravel-ignition": "^2.0"

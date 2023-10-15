@@ -38,10 +38,10 @@ class TeamController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(int $id): TeamResource|JsonResponse
+    public function show(int $teamId): TeamResource|JsonResponse
     {
         try {
-            $team = Team::query()->findOrFail($id);
+            $team = Team::query()->findOrFail($teamId);
             return new TeamResource($team);
         } catch (ModelNotFoundException $exception) {
             return response()->json([
