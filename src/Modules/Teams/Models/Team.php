@@ -1,13 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Teams\Models;
 
 use Database\Factories\TeamFactory;
-use Illuminate\Database\Query\Builder as QueryBuilder;
-use  \Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\CustomModel;
 use Modules\Teams\Builders\TeamQueryBuilder;

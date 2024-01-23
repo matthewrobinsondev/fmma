@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Teams\Interfaces;
 
 use App\Models\User;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\App;
 
 use App\Http\Requests\TeamStoreRequest;
@@ -7,14 +9,12 @@ use App\Models\User;
 use Modules\Teams\DataTransferObjects\TeamDto;
 use Modules\Teams\Interfaces\TeamServiceInterface;
 use Modules\Teams\Resources\TeamResource;
-use Modules\Teams\Services\TeamService;
 
 class TeamController
 {
     public function __construct(
         protected TeamServiceInterface $service
-    )
-    {
+    ) {
     }
 
     public function store(TeamStoreRequest $request): TeamResource

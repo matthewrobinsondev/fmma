@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Teams\DataTransferObjects;
+declare(strict_types=1);
 
-use App\Http\Requests\TeamStoreRequest;
+namespace Modules\Teams\DataTransferObjects;
 
 class TeamDto
 {

@@ -6,7 +6,6 @@ namespace Tests;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
-use Modules\Teams\Models\Team;
 
 abstract class FeatureTestCase extends TestCase
 {

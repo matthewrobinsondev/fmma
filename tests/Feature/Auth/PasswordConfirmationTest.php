@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
 use Tests\FeatureTestCase;
-use Tests\TestCase;
 
 class PasswordConfirmationTest extends FeatureTestCase
 {
