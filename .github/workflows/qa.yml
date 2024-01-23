@@ -45,6 +45,12 @@ jobs:
           DB_DATABASE: database/database.sqlite
         run: vendor/bin/phpunit
 
+      - name: Run Mutation Testing (Infection)
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: vendor/bin/infection --min-covered-msi=90 --threads=4
+
       - name: Run Php Stan
         run: vendor/bin/phpstan analyse --memory-limit=1G
 
@@ -56,6 +62,3 @@ jobs:
 
       - name: Run Php Magic Number Detector
         run: vendor/bin/phpmnd app routes tests config
-
-      - name: Run Infection
-        run: vendor/bin/infection --min-covered-msi=90 --threads=4
