@@ -22,3 +22,7 @@ yarn-error.log
 frankenphp
 frankenphp-worker.php
 _ide_helper.php
+/infection.log
+/infection.html
+/summary.json
+/summary.log

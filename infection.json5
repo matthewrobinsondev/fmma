@@ -1,0 +1,38 @@
+{
+    "source": {
+        "directories": [
+            "app",
+            "src"
+        ]
+    },
+    "timeout": 10,
+    "logs": {
+        "text": "infection.log",
+        "html": "infection.html",
+        "summary": "summary.log",
+        "github": true,
+        "stryker": {
+            "badge": "/^release-.*$/"
+        },
+        "summaryJson": "summary.json"
+    },
+    "mutators": {
+        "global-ignore": [
+            "FooClass::__construct"
+        ],
+        "global-ignoreSourceCodeByRegex": [
+            "Assert::.*"
+        ],
+        "@default": true,
+        "@function_signature": false,
+        "TrueValue": {
+            "ignore": [
+                "NameSpace\\*\\Class::method"
+            ],
+            "ignoreSourceCodeByRegex": [
+                "\\$this->logger.*"
+            ]
+        }
+    },
+    "testFramework":"phpunit",
+}

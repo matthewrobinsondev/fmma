@@ -56,3 +56,6 @@ jobs:
 
       - name: Run Php Magic Number Detector
         run: vendor/bin/phpmnd app routes tests config
+
+      - name: Run Infection
+        run: vendor/bin/infection --min-covered-msi=90 --threads=4
