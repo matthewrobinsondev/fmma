@@ -3,4 +3,8 @@ includes:
 parameters:
     paths:
         - app/
+        - src/
     level: 9
+#    scanFiles:
+#        - _ide_helper_models.php
+    checkGenericClassInNonGenericObjectType: false

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <phpmd-baseline>
   <violation rule="PHPMD\Rule\UnusedFormalParameter" file="app/Console/Kernel.php"/>
-  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="app/Exceptions/Handler.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Modules/CustomModel.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Modules/Teams/Resources/TeamResource.php"/>
   <violation rule="PHPMD\Rule\Controversial\CamelCaseMethodName" file="tests/Feature/Auth/AuthenticationTest.php" method="test_login_screen_can_be_rendered"/>
   <violation rule="PHPMD\Rule\Controversial\CamelCaseMethodName" file="tests/Feature/Auth/AuthenticationTest.php" method="test_users_can_authenticate_using_the_login_screen"/>
   <violation rule="PHPMD\Rule\Controversial\CamelCaseMethodName" file="tests/Feature/Auth/AuthenticationTest.php" method="test_users_can_not_authenticate_with_invalid_password"/>

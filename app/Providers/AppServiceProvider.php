@@ -6,6 +6,8 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Modules\Teams\Interfaces\TeamServiceInterface;
+use Modules\Teams\Services\TeamService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(TeamServiceInterface::class, TeamService::class);
     }
 
     /**
