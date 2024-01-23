@@ -8,12 +8,11 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt;
+use Tests\FeatureTestCase;
 use Tests\TestCase;
 
-class PasswordUpdateTest extends TestCase
+class PasswordUpdateTest extends FeatureTestCase
 {
-    use RefreshDatabase;
-
     public function test_password_can_be_updated(): void
     {
         $user = User::factory()->create();

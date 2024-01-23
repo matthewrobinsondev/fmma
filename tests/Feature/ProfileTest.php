@@ -7,12 +7,11 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
+use Tests\FeatureTestCase;
 use Tests\TestCase;
 
-class ProfileTest extends TestCase
+class ProfileTest extends FeatureTestCase
 {
-    use RefreshDatabase;
-
     public function test_profile_page_is_displayed(): void
     {
         $user = User::factory()->create();
