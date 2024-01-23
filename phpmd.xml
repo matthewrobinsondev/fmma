@@ -5,6 +5,7 @@
     <exclude-pattern>vendor/</exclude-pattern>
     <exclude-pattern>tests/DefaultTests</exclude-pattern>
     <exclude-pattern>node_modules//</exclude-pattern>
+    <exclude-pattern>_ide_helper.php</exclude-pattern>
     <rule ref="rulesets/codesize.xml"></rule>
     <rule ref="rulesets/controversial.xml"/>
     <rule ref="rulesets/design.xml"/>
