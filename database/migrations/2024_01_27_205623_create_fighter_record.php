@@ -9,18 +9,19 @@ use Illuminate\Support\Facades\Schema;
 return new class () extends Migration {
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('fighter_record', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->foreignUlid('user_id')->constrained(table: 'users', indexName: 'teams_user_id');
-            $table->string('name')->unique();
+            $table->foreignUlid('fighter_id')->constrained(table: 'fighters', indexName: 'fighter_record_fighters_id');
+            $table->integer('wins')->default(0);
+            $table->integer('losses')->default(0);
+            $table->integer('draws')->default(0);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->softDeletes();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('fighter_record');
     }
 };
