@@ -9,7 +9,6 @@ use Database\Factories\TeamFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\CustomModel;
 use Modules\Teams\Builders\TeamQueryBuilder;

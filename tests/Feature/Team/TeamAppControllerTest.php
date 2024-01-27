@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Team;
 
-use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Livewire\Volt\Volt;
-use Modules\Teams\Exceptions\TeamException;
 use Modules\Teams\Models\Team;
 use Tests\FeatureTestCase;
 
