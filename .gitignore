@@ -17,7 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-
 /caddy
 frankenphp
 frankenphp-worker.php
@@ -26,3 +25,4 @@ _ide_helper.php
 /infection.html
 /summary.json
 /summary.log
+/.phpactor.json

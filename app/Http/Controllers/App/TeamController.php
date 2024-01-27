@@ -7,6 +7,7 @@ namespace App\Http\Controllers\App;
 use App\Http\Requests\TeamStoreRequest;
 use App\Models\User;
 use Modules\Teams\DataTransferObjects\TeamDto;
+use Modules\Teams\Exceptions\TeamException;
 use Modules\Teams\Interfaces\TeamServiceInterface;
 use Modules\Teams\Resources\TeamResource;
 
@@ -17,10 +18,17 @@ class TeamController
     ) {
     }
 
+    /**
+     * @throws TeamException
+     */
     public function store(TeamStoreRequest $request): TeamResource
     {
         /** @var User $user */
         $user = $request->user();
+
+        if ($user->team()->exists()) {
+            throw TeamException::userCantHaveMultipleTeams();
+        }
 
         /** @var string $name */
         $name = $request->validated('name');

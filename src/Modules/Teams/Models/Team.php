@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Teams\Models;
 
+use App\Models\User;
 use Database\Factories\TeamFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\CustomModel;
 use Modules\Teams\Builders\TeamQueryBuilder;
@@ -36,5 +39,10 @@ class Team extends CustomModel
     public static function newFactory(): TeamFactory
     {
         return TeamFactory::new();
+    }
+
+    public function user(): belongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
