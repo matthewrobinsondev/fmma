@@ -9,10 +9,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class TeamResource extends JsonResource
 {
-    protected string $name;
-
     /**
-     * @return array{name: string}
+     * @return array{name: mixed}
+     * @todo fix requests
      */
     public function toArray(Request $request): array
     {
