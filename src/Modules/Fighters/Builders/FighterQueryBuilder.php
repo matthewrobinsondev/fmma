@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 class FighterQueryBuilder extends Builder
 {
-    //    public function forUser(User $user): self
-    //    {
-    //        return $this->where('user_id', $user->id);
-    //    }
+    public function withRecord(): self
+    {
+        return $this->leftJoin('fighter_records', 'fighter_id', '=', 'id');
+    }
 }

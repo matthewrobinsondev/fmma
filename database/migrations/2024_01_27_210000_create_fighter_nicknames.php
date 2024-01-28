@@ -12,7 +12,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('create_fighter_nicknames', function (Blueprint $table) {
+        Schema::create('fighter_nicknames', function (Blueprint $table) {
             $table->ulid('id')->primary();
             $table->foreignUlid('fighter_id')->constrained(
                 table: 'fighters',
@@ -29,6 +29,6 @@ return new class () extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('create_fighter_nicknames');
+        Schema::dropIfExists('fighter_nicknames');
     }
 };

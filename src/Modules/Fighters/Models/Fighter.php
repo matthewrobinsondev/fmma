@@ -7,11 +7,16 @@ namespace Modules\Fighters\Models;
 use Database\Factories\TeamFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\CustomModel;
 use Modules\Fighters\Builders\FighterQueryBuilder;
 use Modules\Fighters\Enums\Gender;
 
+/**
+ * @property string $id
+ */
 class Fighter extends CustomModel
 {
     use HasUlids;
@@ -32,6 +37,21 @@ class Fighter extends CustomModel
     protected $casts = [
         'gender' => Gender::class,
     ];
+
+    public function nicknames(): HasMany
+    {
+        return $this->hasMany(FighterNickname::class);
+    }
+
+    public function links(): HasOne
+    {
+        return $this->HasOne(FighterLink::class);
+    }
+
+    public function record(): HasOne
+    {
+        return $this->hasOne(FighterRecord::class);
+    }
 
     public function newEloquentBuilder($query): FighterQueryBuilder
     {

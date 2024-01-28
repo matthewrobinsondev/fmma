@@ -6,8 +6,8 @@ namespace Modules\Fighters\Enums;
 
 enum Gender: string
 {
-    case MALE = 'male';
-    case FEMALE = 'female';
+    case MALE = 'Male';
+    case FEMALE = 'Female';
 
     /**
      * @return array<int, string>

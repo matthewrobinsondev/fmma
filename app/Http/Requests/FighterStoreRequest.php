@@ -11,9 +11,13 @@ class FighterStoreRequest extends FormRequest
     public function authorize(): bool
     {
         // add permission
+        // @TODO
         return true;
     }
 
+    /**
+     * @return string[]
+     */
     public function rules(): array
     {
         return [

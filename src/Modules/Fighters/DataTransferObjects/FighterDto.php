@@ -6,6 +6,9 @@ namespace Modules\Fighters\DataTransferObjects;
 
 class FighterDto
 {
+    /**
+     * @param string[]|null $nicknames
+     */
     public function __construct(
         public readonly string $first_name,
         public readonly ?string $last_name,

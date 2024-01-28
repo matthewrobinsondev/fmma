@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Schema;
 return new class () extends Migration {
     public function up(): void
     {
-        Schema::create('fighter_record', function (Blueprint $table) {
+        Schema::create('fighter_records', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->foreignUlid('fighter_id')->constrained(table: 'fighters', indexName: 'fighter_record_fighters_id');
+            $table->foreignUlid('fighter_id')->constrained(table: 'fighters', indexName: 'fighter_records_fighters_id');
             $table->integer('wins')->default(0);
             $table->integer('losses')->default(0);
             $table->integer('draws')->default(0);
@@ -22,6 +22,6 @@ return new class () extends Migration {
 
     public function down(): void
     {
-        Schema::dropIfExists('fighter_record');
+        Schema::dropIfExists('fighter_records');
     }
 };

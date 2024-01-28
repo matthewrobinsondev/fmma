@@ -16,7 +16,7 @@ return new class () extends Migration {
             $table->string('last_name')->nullable();
             $table->enum('gender', Gender::toArray())->default(Gender::MALE);
             $table->string('nationality');
-            $table->string('fighting_out_of');
+            $table->string('fighting_out_of')->nullable();
             $table->string('affiliation')->nullable();
             $table->date('date_of_birth');
             $table->string('image_url')->nullable();
