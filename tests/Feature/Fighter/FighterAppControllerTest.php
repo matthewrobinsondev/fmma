@@ -19,7 +19,7 @@ class FighterAppControllerTest extends FeatureTestCase
             'nationality' => fake()->country,
             'fighting_out_of' => fake()->city,
             'affiliation' => fake()->company,
-            'date_of_birth' => fake()->date('Y-m-d', '-18 years'), // assuming the fighter is at least 18 years old
+            'date_of_birth' => fake()->date('Y-m-d', '-18 years'),
             'image_url' => fake()->imageUrl,
             'wins' => fake()->numberBetween(0, 50),
             'losses' => fake()->numberBetween(0, 50),
@@ -32,5 +32,7 @@ class FighterAppControllerTest extends FeatureTestCase
 
         $response
             ->assertCreated();
+
+        dd($response->json());
     }
 }

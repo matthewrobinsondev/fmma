@@ -32,6 +32,6 @@ class FighterService implements FighterServiceInterface
         $this->createNicknameAction->execute($fighter, $dto);
         // create log
 
-        return $fighter->load(['record', 'links', 'nicknames']);
+        return $fighter;
     }
 }

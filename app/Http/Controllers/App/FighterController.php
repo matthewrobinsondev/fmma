@@ -18,10 +18,14 @@ class FighterController extends Controller
     ) {
     }
 
+    /**
+     * @param FighterStoreRequest $request
+     * @return $fighter
+     */
     public function store(FighterStoreRequest $request)
     {
         $fighter = $this->service->store(dto: new FighterDto(...$request->validated()));
 
-        return response($fighter->toArray(), 201);
+        return FighterResource::make($fighter);
     }
 }
