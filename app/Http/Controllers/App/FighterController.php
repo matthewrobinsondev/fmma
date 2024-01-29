@@ -17,11 +17,7 @@ class FighterController extends Controller
     ) {
     }
 
-    /**
-     * @param FighterStoreRequest $request
-     * @return $fighter
-     */
-    public function store(FighterStoreRequest $request)
+    public function store(FighterStoreRequest $request): FighterResource
     {
         $fighter = $this->service->store(dto: new FighterDto(...$request->validated()));
 
