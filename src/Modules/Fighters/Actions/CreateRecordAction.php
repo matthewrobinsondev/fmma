@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Fighters\Actions;
 
-use Illuminate\Support\Facades\DB;
 use Modules\Fighters\DataTransferObjects\FighterDto;
 use Modules\Fighters\Models\Fighter;
 use Modules\Fighters\Models\FighterRecord;

@@ -19,8 +19,7 @@ class FighterService implements FighterServiceInterface
         private readonly CreateRecordAction $createRecordAction,
         private readonly CreateLinksAction $createLinksAction,
         private readonly CreateNicknameAction $createNicknameAction,
-    )
-    {
+    ) {
     }
 
     public function store(FighterDto $dto): Fighter

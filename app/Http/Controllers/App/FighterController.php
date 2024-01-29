@@ -6,7 +6,6 @@ namespace App\Http\Controllers\App;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FighterStoreRequest;
-use Illuminate\Support\Facades\Http;
 use Modules\Fighters\DataTransferObjects\FighterDto;
 use Modules\Fighters\Interfaces\FighterServiceInterface;
 use Modules\Fighters\Resources\FighterResource;
