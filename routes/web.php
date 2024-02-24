@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\App\FighterController;
 use App\Http\Controllers\App\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,9 @@ Route::view('profile', 'profile')
 Route::controller(TeamController::class)->group(function () {
     Route::post('/team', 'store');
 })->name('team');
+
+Route::controller(FighterController::class)->group(function () {
+    Route::post('fighter', 'store');
+})->name('fighter');
 
 require __DIR__.'/auth.php';

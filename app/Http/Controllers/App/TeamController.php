@@ -26,10 +26,6 @@ class TeamController
         /** @var User $user */
         $user = $request->user();
 
-        if ($user->team()->exists()) {
-            throw TeamException::userCantHaveMultipleTeams();
-        }
-
         /** @var string $name */
         $name = $request->validated('name');
 

@@ -1,10 +1,11 @@
 includes:
     - vendor/larastan/larastan/extension.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
 parameters:
     paths:
         - app/
         - src/
-    level: 9
+    level: 8
 #    scanFiles:
 #        - _ide_helper_models.php
     checkGenericClassInNonGenericObjectType: false
